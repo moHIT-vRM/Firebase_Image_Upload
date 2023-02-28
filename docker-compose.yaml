@@ -1,0 +1,12 @@
+version : "3.3"
+services:
+  db:
+    image: "postgres:13"
+    ports:
+    - "8999:5432"
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=Insane
+      - POSTGRES_PASSWORD=InsaneGPro
+      - POSTGRES_DB=imageUpload
